@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "DeterminationSansWebRegular";
+    src: url(./assets/fonts/DeterminationSansWebRegular-369X.ttf);
+}
+
+.cursor {
+    cursor: pointer;
+    color: white;
+}
+
+.back {
+    background: #D076FF!important;
+    /* o !importante é pra definir que esses componentes precisam estar acima na hierarquia */
+}
+
+.bar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title {
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
