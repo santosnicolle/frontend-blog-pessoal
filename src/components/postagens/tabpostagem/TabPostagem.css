@@ -1,3 +1,26 @@
-.titulo{
+.tituloApp{
     font-weight: bold;
  }
+
+ .appBar {
+    background-color: #9db89d!important;
+ }
+
+ .textoApp{
+     color: white!important;
+ }
+
+/* link que foi visitado */
+
+  a:visited {
+    color: white;
+}
+
+/* mouse over */
+a:hover {
+    color: #000000;
+}
+
+.fundo{
+    background-color: #bed6be!important;
+}

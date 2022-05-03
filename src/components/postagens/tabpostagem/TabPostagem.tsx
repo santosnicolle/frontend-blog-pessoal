@@ -12,20 +12,20 @@ function TabPostagem() {
   return (
     <>
       <TabContext value={value}>
-        <AppBar position="static">
-          <Tabs centered indicatorColor="secondary" onChange={handleChange}>
+        <AppBar position="static" className='appBar'>
+          <Tabs className="textoApp" centered indicatorColor="secondary" onChange={handleChange}>
             <Tab label="Todas as postagens" value="1"/>
             <Tab label="Sobre mim" value="2" />
           </Tabs>
         </AppBar>
-        <TabPanel value="1" >
+        <TabPanel className="fundo" value="1" >
           <Box display="flex" flexWrap="wrap" justifyContent="center">
             <ListaPostagem />
           </Box>
         </TabPanel>
-        <TabPanel value="2">
-          <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+        <TabPanel className="fundo" value="2">
+          <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="tituloApp">Sobre mim</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Atualmente estudo na Universidade Federal do ABC, matriculada no Bacharelado Interdisciplinar de Ciência e Tecnologia com foco para o Pós-BI em Neurociência e Computação, meu objetivo é integralizar as duas áreas e trabalhar com o desenvolvimento de novas tecnológicas relacionadas a neurociência computacional. :)</Typography>
         </TabPanel>
       </TabContext>
     </>

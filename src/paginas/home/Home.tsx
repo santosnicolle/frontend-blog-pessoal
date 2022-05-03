@@ -26,15 +26,12 @@ function Home(){
                 </Grid>
                 <Grid item xs={6} alignContent="center" className="lado">
                     <img src="https://media.giphy.com/media/6aTiw13Zi8XruWOPU6/giphy.gif" alt="Abby-TurningRed"/>
-                </Grid>
-                <Grid xs={12} className="postagem">
-                    {/* <TabPostagem /> */}
-                </Grid>
-
-                
-                
+                </Grid> 
 
             </Grid>
+            <Grid xs={12} className="postagem">
+                   <TabPostagem />
+                </Grid>
         </>
     );
 }
