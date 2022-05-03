@@ -1,7 +1,3 @@
-.textos1{
-    font-weight: bold!important;
-}
-
 .imagem {
     background-image: url(https://i.pinimg.com/564x/28/df/56/28df5670c99bfd36c36af7ccfc32ae03.jpg);
     background-repeat: no-repeat;
@@ -13,4 +9,28 @@
 
 .text-decorator-none {
     text-decoration: none;
+}
+
+.botao1 {
+    background-color: #D076FF!important;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}
+
+a:link {
+    color: #D076FF;
+ }
+
+ /* link que foi visitado */
+
+.cadastro:visited {
+    color: #D076FF!important;
+    
+}
+
+/* mouse over */
+.cadastro:hover {
+    color: #000000;
 }

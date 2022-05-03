@@ -9,20 +9,25 @@
 }
 
 .back {
-    background: #D076FF!important;
+    background: linear-gradient(36deg, #D076FF 8%, #b14ce7 80%)!important;
     /* o !importante é pra definir que esses componentes precisam estar acima na hierarquia */
 }
 
-.bar {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.title {
-    font-weight: bold;
-    margin-left: 25px;
+.margem-paginas{
+    padding: 13px;
 }
 
 .text-decorator-none {
     text-decoration: none;
 }
+ 
+ /* link que foi visitado */
+
+ a:visited {
+     color: white;
+ }
+ 
+ /* mouse over */
+ a:hover {
+     color: #000000;
+ }

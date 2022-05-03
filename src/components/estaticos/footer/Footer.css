@@ -3,16 +3,16 @@
 }
 
 .box1 {
-    background-color: #D076FF;
-    height: 100px;
+    background: linear-gradient(36deg, #D076FF 8%, #b14ce7 80%)!important;
+    height: 70px;
 }
 
 .box2 {
-    background-color: #D076FF;
-    height: 60px;
+    background: linear-gradient(36deg, #D076FF 8%, #b14ce7 80%)!important;
+    height: 50px;
 }
 
 .redes {
-    font-size: 50!important;
+    font-size: 25px!important;
     color: white;
 }

@@ -1,15 +1,34 @@
+@font-face {
+    font-family: 'Patrick Hand', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+}
+
+*{
+    font-family: 'Patrick Hand', cursive!important;
+}
+
+.background{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
+    min-height: calc(100vh - 64px); 
+
+    /* Calc: função do CSS que faz um calculo com medidas e retorna seu resultado. No caso
+            abaixo estamos calculando a largura da tela da pessoa menos a altura do Navbar*/
+}
+
 .titulo{
     color: black!important;
     font-weight: bold!important;
 }
 
-.img {
-    display: block;
-    margin: 0 auto;
-}
-
 .caixa {
     background-color: white!important;
+    margin-top: 50px;
+    min-height: 100vh;
 }
 
 .botao {
