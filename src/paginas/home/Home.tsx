@@ -1,52 +1,34 @@
 import React from "react";
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Box, Button , Grid , Typography, Avatar} from '@material-ui/core';
+import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
 import './Home.css';
 
 // Criando o corpo do nosso componente
 // Nossos componentes são nada mais nada menos que funções
-const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-      '& > *': {
-        margin: theme.spacing(1),
-      },
-    },
-    small: {
-      width: theme.spacing(3),
-      height: theme.spacing(3),
-    },
-    large: {
-      width: theme.spacing(30),
-      height: theme.spacing(30),
-    },
-  }));
 
 function Home(){
-
-    
-      const classes = useStyles();
 
     return(
        
         <>
              <Grid container direction="row" justifyContent="center" alignItems="center" className="background">
                 <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo">Seja bem vinde!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Encontre diversas ponstagens sobre diversos assuntos aqui.</Typography>
+                    <Box paddingX={18} >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo lado2">Seja bem vinde!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo2 lado2">Encontre postagens sobre programação, tecnologia e cultura pop nerd relacionadas aos meus gostos pessoais.</Typography>
                     </Box>
-                    <Box display="flex" justifyContent="center">
+                    <Box display="flex" justifyContent="center" alignItems="center">
                         <Box marginRight={1}>
                         </Box>
                         <Button variant="outlined" className="botao">Ver Postagens</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://media.giphy.com/media/d1s2ksf9QL9XWBv0YT/giphy.gif" alt="Abby-TurningRed"/>
+                <Grid item xs={6} alignContent="center" className="lado">
+                    <img src="https://media.giphy.com/media/6aTiw13Zi8XruWOPU6/giphy.gif" alt="Abby-TurningRed"/>
                 </Grid>
                 <Grid xs={12} className="postagem">
-
+                    {/* <TabPostagem /> */}
                 </Grid>
 
                 

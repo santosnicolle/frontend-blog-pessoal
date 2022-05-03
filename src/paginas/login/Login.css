@@ -1,5 +1,5 @@
 .imagem {
-    background-image: url(https://i.pinimg.com/564x/28/df/56/28df5670c99bfd36c36af7ccfc32ae03.jpg);
+    background-image: url(https://media.giphy.com/media/G0Odfjd78JTpu/giphy.gif);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -12,7 +12,7 @@
 }
 
 .botao1 {
-    background-color: #D076FF!important;
+    background-color: #9db89d!important;
 }
 
 .text-decorator-none {
@@ -20,13 +20,13 @@
 }
 
 a:link {
-    color: #D076FF;
+    color: #9db89d;
  }
 
  /* link que foi visitado */
 
 .cadastro:visited {
-    color: #D076FF!important;
+    color: #9db89d!important;
     
 }
 

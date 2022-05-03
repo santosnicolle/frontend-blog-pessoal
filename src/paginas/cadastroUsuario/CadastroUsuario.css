@@ -1,5 +1,5 @@
 .imagem2 {
-        background-image: url(https://i.pinimg.com/564x/28/df/56/28df5670c99bfd36c36af7ccfc32ae03.jpg);
+        background-image: url(https://media.giphy.com/media/BMu2SwuXflOlQP8jTC/giphy.gif);
         background-repeat: no-repeat;
         width: 100vh;
         min-height: 100vh;
@@ -14,4 +14,9 @@
 
 .btnCancelar {
     margin-right: 20px!important;
+    background-color: #769176!important;
+}
+
+.btnFinalizar {
+    background-color: #8CA38C!important;
 }

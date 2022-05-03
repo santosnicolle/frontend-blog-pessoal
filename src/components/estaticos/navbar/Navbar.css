@@ -9,7 +9,7 @@
 }
 
 .back {
-    background: linear-gradient(36deg, #D076FF 8%, #b14ce7 80%)!important;
+    background: #9db89d!important;
     /* o !importante é pra definir que esses componentes precisam estar acima na hierarquia */
 }
 

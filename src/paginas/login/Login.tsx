@@ -10,8 +10,8 @@ import UserLogin from '../../models/UserLogin';
 
 function Login() {
 
-    let history = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    let history = useNavigate(); //fazer com que a pessoa usuaria navegue na nossa aplicação
+    const [token, setToken] = useLocalStorage('token'); //manipular o armazenamento interno do navegador
     //os hooks são utilizados para manipular os estados dos nossos componentes
 
     const [userLogin, setUserLogin] = useState<UserLogin>({
@@ -61,7 +61,7 @@ function Login() {
    }
 
             useEffect(() => {
-                if(token != ''){
+                if(token != ''){ //hook focado em efeitos colaterais, só executa quando houve outra alteração na variável que ele observa
                     history('/home')
                 }
             }, [token])

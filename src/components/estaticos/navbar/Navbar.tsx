@@ -209,7 +209,7 @@ function Navbar() {
                 <SearchIcon />
               </div>
               <InputBase
-                placeholder="Search…"
+                placeholder="Pesquisa…"
                 classes={{
                   root: classes.inputRoot,
                   input: classes.inputInput,

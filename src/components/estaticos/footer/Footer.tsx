@@ -29,7 +29,7 @@ function Footer () {
                     </Box>
                     <Box className='box2'>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" className='textos' >© 2022 Copyright: Nicolle Santos</Typography>
+                            <Typography variant="subtitle2" align="center" className='textos'> © 2022 Copyright: Nicolle Santos</Typography>
                         </Box>
                         <Box>
                             <a target="_blank" href="https://santosnicolle.herokuapp.com">
