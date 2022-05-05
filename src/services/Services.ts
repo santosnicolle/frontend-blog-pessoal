@@ -44,6 +44,28 @@ export const login = async(url: any, dados: any, setDados: any) => {
     const login = (url, dados, setDados) => {
         ...ação
     } /** estrutura com prioridade de utilização
-
-
 */
+
+export const busca = async(url: any, setDados: any, header: any) => {
+    const resposta = await api.get(url, header) //header referente a cabeçalho, precisamos passar o token necessário para o acesso
+    setDados(resposta.data)
+} //metodo de busca de dados no nosso backend
+
+export const buscaId = async(url: any,setDado: any, header: any) => { 
+    const resposta = await api.get(url,header)
+    setDado(resposta.data)
+} 
+
+export const post = async(url: any, dados: any, setDado: any, header: any) => { 
+    const resposta = await api.post(url,dados,header)
+    setDado(resposta.data)
+}
+
+export const put = async(url: any, dados: any, setDado: any, header: any) => { 
+    const resposta = await api.put(url,dados,header)
+    setDado(resposta.data)
+}
+
+export const deleteId = async(url: any,header: any) => { 
+    await api.delete(url,header)
+}

@@ -55,23 +55,23 @@ function Login() {
        })
    }
 
-   function logar(e: ChangeEvent<HTMLFormElement>){ // função disparada quando enviamos as informações
+{/*    function logar(e: ChangeEvent<HTMLFormElement>){ // função disparada quando enviamos as informações
         e.preventDefault() // previne que faça o recarregamento da página para não perdermos os ideais de single page application
         console.log("UserLogin: " + Object.values(userLogin))
-   }
+    }
+*/}
+        useEffect(() => {
+            if(token != ''){ //hook focado em efeitos colaterais, só executa quando houve outra alteração na variável que ele observa
+                history('/home')
+            }
+        }, [token])
 
-            useEffect(() => {
-                if(token != ''){ //hook focado em efeitos colaterais, só executa quando houve outra alteração na variável que ele observa
-                    history('/home')
-                }
-            }, [token])
-
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+        async function logar (e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
             try{
                 await login('/usuarios/logar', userLogin, setToken)
 
-                alert('Usuartio logado com sucesso!');
+                alert('Usuario logado com sucesso!');
 
             }catch(error){
                 alert('Dados do usuário inconsistentes. Erro ao logar');

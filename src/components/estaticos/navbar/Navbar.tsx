@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { alpha, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -15,7 +16,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
 
 import './Navbar.css';
 
@@ -167,6 +169,15 @@ function Navbar() {
         </MenuItem>
       </Menu>
     );
+
+    const [token, setToken] = useLocalStorage('token');
+    let history = useNavigate();
+
+    function goLogout(){
+      setToken('')
+      alert("Usuário deslogado")
+      history('/login')
+    }
   
     return (
       <div className={classes.grow}>
@@ -197,10 +208,10 @@ function Navbar() {
               </div>
             </Typography>
             </Link>
-            <Link to='/sobre' className='text-decorator-none link'>
+            <Link to='/postagens' className='text-decorator-none link'>
             <Typography className={classes.title} variant="h6" noWrap>
               <div className='margem-paginas'>
-              sobre
+              postagens
               </div>
             </Typography>
             </Link>
@@ -219,6 +230,13 @@ function Navbar() {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
+            <Box onClick={goLogout} className='text-decorator-none link'>
+              <Typography className={classes.title} variant="h6" noWrap>
+                <div className='margem-paginas'>
+                logout
+                </div>
+              </Typography>
+            </Box>
               <IconButton aria-label="show 0 new mails" color="inherit">
                 <Badge badgeContent={0} color="secondary">
                   <MailIcon />
