@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Box, Button , Grid , Typography, Avatar} from '@material-ui/core';
 import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
 import './Home.css';
+import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
+import { Link, useNavigate } from "react-router-dom";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { useSelector } from "react-redux";
 
 // Criando o corpo do nosso componente
 // Nossos componentes são nada mais nada menos que funções
 
 function Home(){
+
+    let history = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
+    useEffect(() => {
+      if (token == "") {
+          alert("Você precisa estar logado")
+          history("/login")
+  
+      }
+  }, [token])
 
     return(
        
@@ -20,8 +37,11 @@ function Home(){
                     </Box>
                     <Box display="flex" justifyContent="center" alignItems="center">
                         <Box marginRight={1}>
+                            <ModalPostagem />
                         </Box>
-                        <Button variant="outlined" className="botao">Ver Postagens</Button>
+                        <Link to ="/postagens">
+                            <Button variant="outlined" className="botao text-decorator-none">Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} alignContent="center" className="lado">

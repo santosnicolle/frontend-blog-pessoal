@@ -2,17 +2,20 @@ import React, { ChangeEvent, useState, useEffect } from 'react';
 
 import { Grid, Box, Typography, TextField, Button } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Services';
 
 import './Login.css';
 import UserLogin from '../../models/UserLogin';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
 
 function Login() {
 
     let history = useNavigate(); //fazer com que a pessoa usuaria navegue na nossa aplicação
-    const [token, setToken] = useLocalStorage('token'); //manipular o armazenamento interno do navegador
+    const [token, setToken] = useState(''); //manipular o armazenamento interno do navegador
     //os hooks são utilizados para manipular os estados dos nossos componentes
+
+    const dispatch = useDispatch();
 
     const [userLogin, setUserLogin] = useState<UserLogin>({
         id: 0,
@@ -62,6 +65,7 @@ function Login() {
 */}
         useEffect(() => {
             if(token != ''){ //hook focado em efeitos colaterais, só executa quando houve outra alteração na variável que ele observa
+                dispatch(addToken(token));
                 history('/home')
             }
         }, [token])

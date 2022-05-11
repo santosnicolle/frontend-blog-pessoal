@@ -3,7 +3,6 @@ import { Grid, Box, TextField, Button, Typography } from '@material-ui/core'
 
 
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 
 import User from "../../models/User";
 import { cadastroUsuario } from '../../services/Services';

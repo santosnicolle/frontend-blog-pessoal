@@ -3,8 +3,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaTema.css';
 import Tema from '../../../models/Tema'
-import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../services/Services';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
 
 function ListaTema() {
 
@@ -19,7 +20,9 @@ function ListaTema() {
     ]
   */
 
-  const [token, setToken] = useLocalStorage('token'); //garante acesso ao token armazenado no useLocalStorage
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
   useEffect(() => {
     if(token === ""){
