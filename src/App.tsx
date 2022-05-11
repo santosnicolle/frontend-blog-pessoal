@@ -2,6 +2,8 @@ import React from 'react';
 import {Grid, Paper} from '@material-ui/core';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Home from './paginas/home/Home'
 import Navbar from './components/estaticos/navbar/Navbar';
@@ -21,6 +23,7 @@ import store from './store/store'
 function App() {
   return (
     <Provider store={store}>
+      <ToastContainer />
             <Router>
                 <Navbar />
                   <div style={{ minHeight: '100vh' }}>
