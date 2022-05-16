@@ -160,7 +160,7 @@ function CadastroPost() {
                        }
                    </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button className="btnFinalizar" type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
                 </FormControl>

@@ -143,22 +143,6 @@ function Navbar() {
         open={isMobileMenuOpen}
         onClose={handleMobileMenuClose}
       >
-        <MenuItem>
-          <IconButton aria-label="show 4 new mails" color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messagens</p>
-        </MenuItem>
-        <MenuItem>
-          <IconButton aria-label="show 11 new notifications" color="inherit">
-            <Badge badgeContent={11} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-          <p>Notificações</p>
-        </MenuItem>
         <MenuItem onClick={handleProfileMenuOpen}>
           <IconButton
             aria-label="account of current user"
@@ -220,13 +204,6 @@ function Navbar() {
           </div>
         </Typography>
         </Link>
-        <Link to='/login' className='text-decorator-none'>
-        <Typography className={classes.title} variant="h6" noWrap>
-          <div className='margem-paginas'>
-          login
-          </div>
-        </Typography>
-        </Link>
         <Link to='/postagens' className='text-decorator-none link'>
         <Typography className={classes.title} variant="h6" noWrap>
           <div className='margem-paginas'>
@@ -256,16 +233,6 @@ function Navbar() {
             </div>
           </Typography>
         </Box>
-          <IconButton aria-label="show 0 new mails" color="inherit">
-            <Badge badgeContent={0} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <IconButton aria-label="show 0 new notifications" color="inherit">
-            <Badge badgeContent={0} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
           <IconButton
             edge="end"
             aria-label="account of current user"
