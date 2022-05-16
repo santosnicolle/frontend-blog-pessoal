@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'VT323', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gugi&family=PT+Sans+Narrow&family=Patrick+Hand&family=Shadows+Into+Light&family=Turret+Road:wght@200&family=VT323&family=Varela+Round&family=Waiting+for+the+Sunrise&display=swap');
+}
+
+*{
+  font-family: 'VT323', monospace!important;
+}
+
 .App {
   text-align: center;
 }
