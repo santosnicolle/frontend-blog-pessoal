@@ -211,6 +211,13 @@ function Navbar() {
           </div>
         </Typography>
         </Link>
+        <Link to='/temas' className='text-decorator-none link'>
+        <Typography className={classes.title} variant="h6" noWrap>
+          <div className='margem-paginas'>
+          temas
+          </div>
+        </Typography>
+        </Link>
         <div className={classes.search}>
           <div className={classes.searchIcon}>
             <SearchIcon />

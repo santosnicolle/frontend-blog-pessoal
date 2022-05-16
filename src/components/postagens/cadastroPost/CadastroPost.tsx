@@ -129,7 +129,7 @@ function CadastroPost() {
     }
 
     function back() {
-        history('/posts')
+        history('/postagens')
     }
  
     return (
